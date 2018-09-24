@@ -1,0 +1,13 @@
+{
+  "name": "harp-npm-scripts",
+  "version": "1.0.0",
+  "description": "harp & npm script",
+  "devDependencies": {
+    "browser-sync": "^2.24.7"
+  },
+  "scripts": {
+    "dev": "harp server & browser-sync start --proxy 'localhost:9000' --files 'index.ejs, main.scss'"
+  },
+  "author": "",
+  "license": "ISC"
+}
