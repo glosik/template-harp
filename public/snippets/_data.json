@@ -1,5 +1,10 @@
 {
     "portfolio": {
+        "page": "tariq pure css isotop like",
         "link": "portfolio.css"
+    },
+    "inuit": {
+        "page" : "pattern library for inuit",
+        "link": "inuit.css"
     }
 }
