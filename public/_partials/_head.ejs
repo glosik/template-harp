@@ -1,8 +1,10 @@
-<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title><%- title %> /<%- site %></title>
-	<meta name="description" content="<%- description %>">
-	<meta name="viewport" content="width=device-width">
-	<!--%- partial("_partials/_canonical") %-->
-    <!--%- partial("_partials/_web-font-loader") %-->
-	<!--%- partial("_partials/_og") %-->
+<title><%- title %> /<%- site %></title>
+<%- partial("_meta") %>
+<meta name="description" content="<%- description %>"/>
+<!--%- partial("head._favicon") %-->
+<!--%- partial("head._prefetch") %-->
+<!--%- partial("head._meta-social") %-->
+<!--%- partial("head._rel-canonical") %-->
+<!--%- partial("head._meta-app") %-->
+<!--%- partial("head._script-ld") %-->
+<!--%- partial("_head.web-font-loader") %-->
