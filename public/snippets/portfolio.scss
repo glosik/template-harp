@@ -1,0 +1,94 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+html,body,.portfolio{height: 100%;font-family:sans-serif;
+}
+label{
+    cursor: pointer;
+    display: inline-block;
+    width:19%;
+    line-height:20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 10px;
+    float:left;
+}
+.hide:checked + label{
+    color: #fff;
+    background-color: navy;
+}
+.portfolio {
+    > figure {
+        position: relative;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        &:hover figcaption{
+            transform: translateX(0);
+        }
+    }
+    figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(58, 63, 67, .8);
+        padding: 10%;
+        height: 100%;
+        width: 100%;
+        transform: translateX(100%);
+        transition: all 350ms;
+        h4 {
+            color: #fff;
+        }
+        p {
+            color: #fff;
+            font-size: 0.87em;
+        }
+    }
+}
+.hide{display: none;}
+ .portfolio > figure{
+    //display: none;
+    transform: translateX(100%);
+    opacity: 0;
+    width: 0;
+}
+#all:checked ~ .portfolio .all,
+#posters:checked ~ .portfolio .poster,
+#illustration:checked ~ .portfolio .illustration,
+#typography:checked ~ .portfolio .typography,
+#packaging:checked ~ .portfolio .package{
+    display: block;
+    opacity: 1;
+    width: 100%;
+    transform: translateX(0);
+    transition: all 350ms;
+    float: none;
+}
+#all:checked ~ .portfolio .all{
+    width:50%;
+    float:left;
+}
+#list{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(58, 63, 67, .8);
+        padding: 10%;
+        height: 100%;
+        width: 100%;
+        transform: translateY(100%);
+        transition: all 350ms;
+}
+::target {
+   transform:translateY(0);
+    top: 50px;
+    transition: all 350ms;
+
+}
