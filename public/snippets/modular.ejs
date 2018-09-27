@@ -1,0 +1,41 @@
+<div class="container">
+    <h1>Modular CSS</h1>
+
+    <p>All methodologies aim to split up your code into reusable blocks. Blocks should be independent of the design or page context, as far as possible. Most programmers will already be familiar with this kind of abstractions while for some designers, it will be a newer way of thinking. Imagine that you write down all style rules for the footer of your website in a separate file, and then you can reuse that file in a new project to style the footer again.</p>
+    <p>Most projects do not focus on only one methodology, but use concepts from different methodologies to build a strategy to organize the Less (or CSS) code. Also note that BEM, is, in fact, nothing more than a concrete application of OOCSS.</p>
+    <p>The focus of SMACC is the organizable structure of your code. SMACC code should be grouped into five categories: base, layout, modules, states, and theme. You can use the @import feature of Less to create a file structure for each group. When you inspect the Less code of projects such as Bootstrap, you will find that this code has also been organized in a similar way. You can read more about SMACC on the official website at https://smacss.com/. Most of the content of this website, the book, and the workshops are not available for free.</p>
+    <p>OOCSS focuses on the code structure of your code. With OOCSS, you will code reusable objects of styles. With OOCSS you work with reusable objects and each object contains styles rules for a HTML structure which holds a type of content. The basic rules of OOCSS help you to separate the structure from skin and container from content. The OOCSS media object is probably the most discussed example. You can read more about the media object at http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/. When we create an object for buttons, it will look as shown in the following code:</p>
+    <pre>
+    .btn {}
+    .btn .btn-error{}
+    .btn .active {}
+    </pre>
+    <p>OOCSS not only tries to separate the container from the content, but also separates the style from the structure. In the button example, the .btn selector provides the structure while the .btn-error selector provides the styling. Also note that the .btn .active {} selector describes a state of your button object.</p>
+    <p>Nesting of selectors can be used to organize style rules for the button object together. The following Less code can be used for the button object:</p>
+    <pre>
+        .btn {
+      .btn-error{}
+      .active {}
+    }
+    </pre>
+    <p>As already mentioned, BEM is an application of OOCSS. The BEM syntax uses the following assumptions:</p>
+    <ul>
+        <li>CSS selectors are used to describe components (.btn)</li>
+        <li>The selector name followed by __ (two underscores) and the descriptive name of the descendant are used for styling of the component (.btn__btn-error{})</li>
+        <li>Component's states can be declared by the name followed by – (double dashes) and the state (.btnactive{})</li>
+    </ul>
+    <p>The Less code for the button component using BEM will look like the following code:</p>
+    <pre>
+        .btn {
+      &__error {}
+      &--active{}
+    }
+    </pre>
+    <p>The preceding Less code makes use of the & parent selector and nesting, and will compile into the CSS code as follows:</p>
+    <pre>
+    .btn {}
+    .btn—error {}
+    . btn—active {}
+    </pre>
+    <h2>ERRATA?</h2>
+    </div>

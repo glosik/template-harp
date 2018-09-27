@@ -6,5 +6,9 @@
     "inuit": {
         "page" : "pattern library for inuit",
         "link": "inuit.css"
+    },
+    "modular": {
+        "page" : "modular css",
+        "link": "modular.css"
     }
 }
