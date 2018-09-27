@@ -1,23 +1,12 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html>
 <head>
-	<%- partial("_partials/_head") %>
-	<link rel="stylesheet" href="main.css">
+    <%- partial("../_partials/_head") %>
+    <link rel="stylesheet" href="<%- link %>">
 </head>
 <body>
-
-    <header>
-    </header>
-
-    <main>
-        <%- yield %>
-    </main>
-
-    <footer>
-    </footer>
-
+    <header><%- partial("_partials/_header") %></header>
+    <main><%- yield %></main>
+    <footer><%- partial("_partials/_footer") %></footer>
 </body>
 </html>
