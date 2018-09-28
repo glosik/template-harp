@@ -1,0 +1,36 @@
+<nav>
+    <ul class="nav justify-content-end">
+        <li class="nav-item"><a class="nav-link" href="snippets/portfolio.html">portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="snippets/inuit.html">inuit</a></li>
+        <li class="nav-item"><a class="nav-link" href="snippets/modular.html">modular</a></li>
+    </ul>
+</nav>
+<h6><%- current.path.length %></h6>
+<h6><%- current.path %></h6>
+<h3 class="text-warning">path: <%- current.path.length == 1 ? '' : current.path[0] %></h3>
+
+<nav>
+    <ul class="nav justify-content-end">
+        <% for(var i in public.snippets._contents){ %>
+          <% var image = public.snippets._contents[i] %>
+            <% if ( image.match(/\b.(html|htm)\b/gi) ) { %>
+            <li class="nav-item"><a class="nav-link" href="<%- current.path.length == 1 ? 'snippets' : '' %>/<%= image %>"><%= image %></a></li>
+          <% } %>
+        <% } %>
+    </ul>
+</nav>
+
+
+<% for(var slug in public.snippets._data){ %>
+        <h4 class="text-danger"><%= slug %></h4>
+<!--        <h4 class="text-danger"--><!--%= public.snippets._data[slug].link %></h4>-->
+<% } %>
+<!--
+<nav>
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="snippets/portfolio.html">portfolio</a></li>
+        <li class="list-inline-item"><a href="snippets/inuit.html">inuit</a></li>
+        <li class="list-inline-item"><a href="snippets/modular.html">modular</a></li>
+    </ul>
+</nav>
+-->

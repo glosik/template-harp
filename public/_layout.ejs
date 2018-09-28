@@ -4,9 +4,9 @@
     <%- partial("../_partials/_head") %>
     <link rel="stylesheet" href="<%- link %>">
 </head>
-<body>
-    <header><%- partial("_partials/_header") %></header>
+<body class="sticky-footer">
+    <header class="bg-light"><%- partial("_partials/_header") %></header>
     <main><%- yield %></main>
-    <footer><%- partial("_partials/_footer") %></footer>
+    <footer class="bg-dark text-white"><%- partial("_partials/_footer") %></footer>
 </body>
 </html>
