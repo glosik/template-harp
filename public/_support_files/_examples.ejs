@@ -1,0 +1,18 @@
+<nav>
+    <ul class="nav justify-content-end">
+        <% for(var i in public.snippets._contents){ %>
+          <% var image = public.snippets._contents[i] %>
+            <% if ( image.match(/\b.(html|htm)\b/gi) ) { %>
+            <li class="nav-item"><a class="nav-link" href="/snippets/<%= image %>"><%= image %></a></li>
+            <small><%- current.path[0] %>/<%- current.path[1] %></small>
+          <% } %>
+        <% } %>
+    </ul>
+</nav>
+
+
+<% for(var slug in public.snippets._data){ %>
+        <h4 class="text-danger"><%= slug %></h4>
+        <h4 class="text-danger"><%= url %></h4>
+<% } %>
+

@@ -1,14 +1,17 @@
 {
     "portfolio": {
         "page": "tariq pure css isotop like",
-        "link": "portfolio.css"
+        "style": "portfolio.css",
+        "url" : "/snippets/portfolio.html"
     },
     "inuit": {
         "page" : "pattern library for inuit",
-        "link": "inuit.css"
+        "style": "inuit.css",
+        "url" : "/snippets/inuit.html"
     },
     "modular": {
         "page" : "modular css",
-        "link": "modular.css"
+        "style": "modular.css",
+        "url" : "/snippets/modular.html"
     }
 }

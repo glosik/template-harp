@@ -10,6 +10,24 @@
         "STYLE": {
             "level-1" : "main.css",
             "level-2" : "../main.css"
+        },
+        "PAGES": {
+            "SNIPPETS": {
+                "name": "snippets",
+                "url": "/snippets/index.html"
+            },
+            "INUIT": {
+                "name": "inuit",
+                "url": "/snippets/inuit.html"
+            },
+            "MODULAR": {
+                "name": "modular",
+                "url": "/snippets/modular.html"
+            },
+            "PORTFOLIO": {
+                "name": "portfolio",
+                "url": "/snippets/portfolio.html"
+            }
         }
 	}
 }
