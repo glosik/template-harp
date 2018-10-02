@@ -1,12 +1,13 @@
 <!doctype html>
 <html>
 <head>
-    <%- partial("../_partials/_head") %>
+    <%- partial("_partials/_head") %>
     <link rel="stylesheet" href="<%- style %>">
 </head>
 <body class="sticky-footer">
     <header class="bg-light"><%- partial("_partials/_header") %></header>
     <main><%- yield %></main>
     <footer class="bg-dark text-white"><%- partial("_partials/_footer") %></footer>
+    <%- partial("_partials/_ga") %>
 </body>
 </html>

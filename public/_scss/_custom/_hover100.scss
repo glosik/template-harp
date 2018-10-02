@@ -1,0 +1,31 @@
+$w : 2px;
+$hover-color: darken( $link-color, 10%);
+
+a.link-effect {
+	text-decoration: none;
+	// color: $link-color;
+	position: relative;
+	&:after {
+		transition: width .3s ease-out, left .3s ease-out, border-color .3s ease-out;
+		position: absolute;
+		display: block;
+		bottom: -(2 * $w);
+		left: 50%;
+		width: 0;
+		border-top: $w solid $link-color;
+		content: '';
+		padding-bottom: inherit;
+
+	}
+
+	&:hover {
+        color: $hover-color;
+		&::after{
+			left: 0;
+			width: 100%;
+            color: $link-color;
+		}
+
+		//text-decoration: underline;
+	}
+}
